@@ -1,0 +1,36 @@
+﻿@viewModel FlightFinder.Web.ViewModels.DefaultViewModel, FlightFinder.Web
+
+<div class="px-4" Visible="{value: SearchResults.Count > 0}">
+    <div class="title">
+        <h2 class="my-3">{{value: SearchResults.Count}} results</h2>
+
+        <dot:ComboBox class="custom-select"
+                      DataSource="{value: SortOrders}"
+                      ItemTextBinding="{value: Name}"
+                      ItemValueBinding="{value: Value}"
+                      SelectedValue="{value: SortOrder}" />
+    </div>
+
+    <dot:Repeater DataSource="{value: SearchResults}">
+        <div class="mb-4 d-flex align-items-center">
+            <ul class="list-group">
+                <li class="list-group-item align-items-center">
+                    <cc:SearchResultFlightSegment Symbol="▶" 
+                                                  DataContext="{value: Outbound}"
+                                                  class="d-flex" />
+                </li>
+                <li class="list-group-item align-items-center">
+                    <cc:SearchResultFlightSegment Symbol="◀" 
+                                                  DataContext="{value: Return}"
+                                                  class="d-flex"  />
+                </li>
+            </ul>
+            <div class="price ml-3">
+                <h3>${{value: Price.ToString("0")}}</h3>
+                <dot:Button class="btn" 
+                            ButtonTagName="button"
+                            Click="{command: _root.AddToShortlist(_this)}">Add</dot:Button>
+            </div>
+        </div>
+    </dot:Repeater>
+</div>

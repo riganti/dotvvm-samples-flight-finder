@@ -1,0 +1,20 @@
+﻿@viewModel FlightFinder.Web.ViewModels.DefaultViewModel, FlightFinder.Web
+@masterPage Views/MasterPage.dotmaster
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <div id="search-and-results-area">
+        <div id="search-area" class="px-2 py-3">
+            <cc:Search />
+        </div>
+        <div id="results-area">
+            <div class-greyout="{value: _page.IsPostbackRunning}">
+                <div class="cover"></div>
+                <cc:SearchResults />
+            </div>
+        </div>
+    </div>
+    <div id="selections-area" class="p-3 pl-4">
+        <cc:Shortlist />
+    </div>
+    
+</dot:Content>

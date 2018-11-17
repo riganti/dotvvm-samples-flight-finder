@@ -1,0 +1,18 @@
+﻿@viewModel FlightFinder.Shared.FlightSegment, FlightFinder.Shared
+
+<div class="date">
+    <h4>{{value: DepartureTime.ToString("ddd MMM d")}}</h4>
+    {{value: TicketClass.Name}}
+</div>
+
+<div class="departure">
+    <h4>{{value: DepartureTime.ToString("H:mm")}}</h4>
+    {{value: FromAirportCode}}
+</div>
+
+<div class="arrow">➝</div>
+
+<div class="return">
+    <h4>{{value: ReturnTime.ToString("H:mm")}}</h4>
+    {{value: ToAirportCode}}
+</div>

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "projectName": "FlightFinder.Web",
+  "rootNamespace": "FlightFinder.Web",
+  "uiTestProjectPath": null,
+  "uiTestProjectRootNamespace": null,
+  "apiClients": [
+    {
+      "swaggerFile": "http://localhost:32325/swagger/v1/swagger.json",
+      "csharpClient": "Api/ApiClient.cs",
+      "typescriptClient": "wwwroot/js/ApiClient.ts",
+      "namespace": "FlightFinder.Web.Api",
+      "compileTypescript": true,
+      "generateWrapperClass": true,
+      "isSingleClient": true,
+      "fetchOptions": {
+        "credentials": "same-origin"
+      }
+    }
+  ]
+}

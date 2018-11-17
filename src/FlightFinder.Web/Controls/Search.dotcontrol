@@ -1,0 +1,69 @@
+﻿@viewModel FlightFinder.Web.ViewModels.DefaultViewModel, FlightFinder.Web
+
+<div class="col">
+    <!-- Airport selection -->
+    <div class="row py-1">
+        <!-- From airport -->
+        <div class="col pr-0">
+            <div class="form-control d-flex">
+                <div><i>✈</i>&nbsp;&nbsp;From:</div>
+                <dot:ComboBox DataSource="{value: Airports}" 
+                              ItemTextBinding="{value: Code + " - " + DisplayName}"
+                              ItemValueBinding="{value: Code}"
+                              SelectedValue="{value: Criteria.FromAirport}" 
+                              EmptyItemText="..." />
+            </div>
+        </div>
+        <div class="col px-2 py-1 align-self-end arrow">➝</div>
+
+        <!-- To airport -->
+        <div class="col pl-0">
+            <div class="form-control d-flex">
+                <div><i>✈</i>&nbsp;&nbsp;To:</div>
+                <dot:ComboBox DataSource="{value: Airports}"
+                              ItemTextBinding="{value: Code + " - " + DisplayName}"
+                              ItemValueBinding="{value: Code}"
+                              SelectedValue="{value: Criteria.ToAirport}"
+                              EmptyItemText="..." />
+            </div>
+        </div>
+    </div>
+
+    <!-- Departure / return dates -->
+    <div class="row py-1">
+        <!-- Depart date -->
+        <div class="col pr-0">
+            <div class="form-control d-flex">
+                <div><i>🗓</i>&nbsp;&nbsp;Depart:</div>
+                <dot:TextBox Text="{value: Criteria.OutboundDate}" FormatString="yyyy-MM-dd" />
+            </div>
+        </div>
+        <div class="col px-2 py-1 align-self-end arrow">➝</div>
+
+        <!-- Return date -->
+        <div class="col pl-0">
+            <div class="form-control d-flex">
+                <div><i>🗓</i>&nbsp;&nbsp;Return:</div>
+                <dot:TextBox Text="{value: Criteria.ReturnDate}" FormatString="yyyy-MM-dd" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Class / search -->
+    <div class="row py-1 d-flex px-3">
+        <div>
+            <dot:ComboBox class="custom-select"
+                          DataSource="{value: TicketClasses}"
+                          ItemTextBinding="{value: Name}"
+                          ItemValueBinding="{value: Value}"
+                          SelectedValue="{value: Criteria.TicketClass}" />
+        </div>
+        <div class="ml-auto">
+            <dot:Button class="btn btn-danger px-5"
+                        ButtonTagName="button"
+                        Click="{command: Search()}">
+                Search ➝
+            </dot:Button>
+        </div>
+    </div>
+</div>

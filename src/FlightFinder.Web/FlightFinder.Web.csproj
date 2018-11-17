@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <!--Include Views-->
+    <Content Include="**/*.dothtml" Exclude="obj/**/*.*;bin/**/*.*">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <!--Include MasterPage Views-->
+    <Content Include="**/*.dotmaster" Exclude="obj/**/*.*;bin/**/*.*">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <!--Include Custom Control Views-->
+    <Content Include="**/*.dotcontrol" Exclude="obj/**/*.*;bin/**/*.*">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Client\**" />
+    <Content Remove="Client\**" />
+    <EmbeddedResource Remove="Client\**" />
+    <None Remove="Client\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controls\Search.dotcontrol" />
+    <None Remove="Controls\SearchResultFlightSegment.dotcontrol" />
+    <None Remove="Controls\SearchResults.dotcontrol" />
+    <None Remove="Controls\Shortlist.dotcontrol" />
+    <None Remove="Controls\ShortlistFlightSegment.dotcontrol" />
+    <None Remove="dotvvm_serialized_config.json.tmp" />
+    <None Remove="Views\MasterPage.dotmaster" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.3" />
+    <PackageReference Include="DotVVM.AspNetCore" Version="2.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="DotVVM.Compiler.Light" Version="2.0.3" />
+    <DotNetCliToolReference Include="DotVVM.CommandLine" Version="2.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlightFinder.Shared\FlightFinder.Shared.csproj" />
+  </ItemGroup>
+</Project>

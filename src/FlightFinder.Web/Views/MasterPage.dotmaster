@@ -1,0 +1,16 @@
+﻿@viewModel FlightFinder.Web.ViewModels.MasterPageViewModel, FlightFinder.Web
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Flight Finder</title>
+    <link href="~/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.min.css" rel="stylesheet" />
+</head>
+<body>
+
+	<dot:ContentPlaceHolder ID="MainContent" />
+
+</body>
+</html>

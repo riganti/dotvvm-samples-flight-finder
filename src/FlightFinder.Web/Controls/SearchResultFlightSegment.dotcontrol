@@ -1,0 +1,27 @@
+﻿@viewModel FlightFinder.Shared.FlightSegment, FlightFinder.Shared
+@baseType FlightFinder.Web.Controls.SearchResultFlightSegment, FlightFinder.Web
+
+<div class="symbol">
+    {{value: _control.Symbol}}
+</div>
+
+<div class="airline">
+    {{value: Airline}}
+    <small>{{value: TicketClass.Name}}</small>
+</div>
+
+<div class="departure">
+    <h4>{{value: DepartureTime.ToString("H:mm")}}</h4>
+    {{value: ReturnTime.ToString("ddd MMM d")}} ({{value: FromAirportCode}})
+</div>
+
+<div class="arrow">➝</div>
+
+<div class="return">
+    <h4>{{value: ReturnTime.ToString("H:mm")}}</h4>
+    {{value: ReturnTime.ToString("ddd MMM d")}} ({{value: ToAirportCode}})
+</div>
+
+<div class="duration">
+    {{value: DurationHours}} hours
+</div>
