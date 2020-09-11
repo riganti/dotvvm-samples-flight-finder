@@ -2,7 +2,7 @@
 
 This application is a [DotVVM](https://github.com/riganti/dotvvm) remake of [Blazor Flight Finder demo](https://github.com/aspnet/samples/tree/master/samples/aspnetcore/blazor). 
 
-![Screenshot](images/ff001.png)
+![Screenshot](https://raw.githubusercontent.com/riganti/dotvvm-samples-flight-finder/master/images/ff001.png)
 
 ## Prerequisites
 * Make sure you have installed [DotVVM for Visual Studio](https://www.dotvvm.com/install)
@@ -14,15 +14,15 @@ or
 `git clone https://github.com/riganti/dotvvm-samples-flight-finder.git`
 
 2. Open `src/FlightFinder.sln` 
-![Open the solution file](images/ff002.png)
+![Open the solution file](https://raw.githubusercontent.com/riganti/dotvvm-samples-flight-finder/master/images/ff002.png)
 
 3. Right-click the `FlightFinder.Api` project and select **View > View in Browser**
-![View FlightFinder.Api in Browser](images/ff003.png)
+![View FlightFinder.Api in Browser](https://raw.githubusercontent.com/riganti/dotvvm-samples-flight-finder/master/images/ff003.png)
 
 4. You will see HTTP 404, but it is OK – the `FlightFinder.Api` project is a REST API without a home page – it only provides data to the app itself
 
 5. Right-click `FlightFinder.Web` project and select **View > View in Browser**
-![View FlightFinder.Web in Browser](images/ff004.png)
+![View FlightFinder.Web in Browser](https://raw.githubusercontent.com/riganti/dotvvm-samples-flight-finder/master/images/ff004.png)
 
 ## What you can learn in the sample
 
