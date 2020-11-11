@@ -1,13 +1,13 @@
-# DotVVM Flight Finder Sample
+![Screenshot](https://raw.githubusercontent.com/riganti/dotvvm-samples-flight-finder/master/images/ff001.png)
+
+## DotVVM Flight Finder Sample
 
 This application is a [DotVVM](https://github.com/riganti/dotvvm) remake of [Blazor Flight Finder demo](https://github.com/aspnet/samples/tree/master/samples/aspnetcore/blazor). 
 
-![Screenshot](https://raw.githubusercontent.com/riganti/dotvvm-samples-flight-finder/master/images/ff001.png)
-
-## Prerequisites
+### Prerequisites
 * Make sure you have installed [DotVVM for Visual Studio](https://www.dotvvm.com/install)
 
-## How to run the sample
+### How to run the sample
 
 1. [Open the GitHub repo in Visual Studio](git-client://clone/?repo=https%3A%2F%2Fgithub.com%2Friganti%2Fdotvvm-samples-flight-finder)
 or 
@@ -24,7 +24,7 @@ or
 5. Right-click `FlightFinder.Web` project and select **View > View in Browser**
 ![View FlightFinder.Web in Browser](https://raw.githubusercontent.com/riganti/dotvvm-samples-flight-finder/master/images/ff004.png)
 
-## What you can learn in the sample
+### What you can learn in the sample
 
 * How to use [REST API bindings](https://www.dotvvm.com/docs/tutorials/basics-rest-api-bindings/latest) to work with APIs directly from Views
 * How to use Markup Controls
