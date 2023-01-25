@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 using DotVVM.Framework.Hosting;
 using FlightFinder.Shared;
 using FlightFinder.Web.Api;
+using Microsoft.Extensions.Logging;
 
 namespace FlightFinder.Web
 {
@@ -38,13 +39,11 @@ namespace FlightFinder.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
-
             // use DotVVM
             var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(env.ContentRootPath);
-
+            
             // use static files
             app.UseStaticFiles(new StaticFileOptions
             {
